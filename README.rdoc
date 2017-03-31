@@ -21,11 +21,9 @@ redis
 
 * Deployment instructions
 
-to start service, don't forget to run these command
+to start service, don't forget to run these commands
 
-```
 $ redis-server
 $ bin/cable
 $ bin/rails s
-```
 
