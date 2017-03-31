@@ -21,11 +21,11 @@ redis
 
 * Deployment instructions
 
-<tt>
 to start service, don't forget to run these command
+
 ```
 $ redis-server
 $ bin/cable
 $ bin/rails s
 ```
-</tt>
+
