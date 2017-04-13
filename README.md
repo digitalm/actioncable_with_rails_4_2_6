@@ -1,5 +1,4 @@
-# rails actioncable test
-[![wercker status](https://app.wercker.com/status/35827d6a4bfccbc102c580c0a50d8307/s/master "wercker status")](https://app.wercker.com/project/byKey/35827d6a4bfccbc102c580c0a50d8307)
+## rails actioncable test
 
 == README
 
@@ -26,7 +25,8 @@ redis
 
 to start service, don't forget to run these commands
 
+```
 $ redis-server
 $ bin/cable
 $ bin/rails s
-
+```
