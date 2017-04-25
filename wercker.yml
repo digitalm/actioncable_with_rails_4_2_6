@@ -26,3 +26,6 @@ build:
             name: rspec
             code: bundle exec rspec
 
+        - internal/shell:
+          cmd: /bin/bash
+
