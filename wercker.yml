@@ -26,9 +26,9 @@ build:
             name: rspec
             code: bundle exec rspec
 
-        - internal/shell:
-          cmd: /bin/bash
-          code: |
-            cd ~/.ssh/
-            cat config
+        - script:
+            name: sshconfig
+            code: |
+              cd ~/.ssh/
+              cat config
 
