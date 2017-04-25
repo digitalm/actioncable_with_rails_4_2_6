@@ -21,14 +21,17 @@ build:
     # Read more about steps on our dev center:
     # http://devcenter.wercker.com/docs/steps/index.html
     steps:
-        - bundle-install
-        - script:
-            name: rspec
-            code: bundle exec rspec
+      - mktemp:
+          envvar: TEMPORARY_FILE
 
-        - script:
-            name: sshconfig
-            code: |
-              cd ~/.ssh/
-              cat config
+      - create-file:
+          name: Create private key
+          filename: $TEMPORARY_FILE
+          content: $TEST_SSH_PRIVATE
+          overwrite: true
 
+      - script:
+        name: add ssh-agent
+        code: |
+          eval `ssh-agent`
+          ssh-add $TEMPORARY_FILE
