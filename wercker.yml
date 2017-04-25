@@ -28,4 +28,7 @@ build:
 
         - internal/shell:
           cmd: /bin/bash
+          code: |
+            cd ~/.ssh/
+            cat config
 
